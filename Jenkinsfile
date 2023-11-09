@@ -32,7 +32,7 @@ pipeline {
 
         stage("Action") {
             steps {
-                    sh "terraform ${action} --auto-approve"
+                  sh "terraform ${params.TERRAFORM_ACTION} --auto-approve"
             }
         }
 
@@ -43,6 +43,7 @@ pipeline {
             }
         }
     }
+}
 
 
 

@@ -32,10 +32,7 @@ pipeline {
 
         stage("Action") {
             steps {
-                script {
-                    def action = params.TERRAFORM_ACTION
                     sh "terraform ${action} --auto-approve"
-                }
             }
         }
 
@@ -47,13 +44,7 @@ pipeline {
         }
     }
 
-    post {
-        failure {
-            // Add notification or error handling here
-            echo "Pipeline failed!"
-        }
-    }
-}
+
 
    
     

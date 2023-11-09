@@ -7,7 +7,7 @@ pipeline {
 
     environment {
         AWS_ACCESS_KEY_ID = credentials('sylviewn_AWS_ACCESS_ID')
-        AWS_SECRET_ACCESS_KEY = credentials('sylviewn_AWS_ACCESS_ID')
+        AWS_SECRET_ACCESS_KEY = credentials('sylviewn_AWS_SECRET_ACCESS_KEY')
         AWS_DEFAULT_REGION = "us-east-1"
     }
 
